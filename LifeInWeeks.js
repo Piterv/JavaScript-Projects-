@@ -1,14 +1,14 @@
-function lifeInWeeks(age){
+function lifeInWeeks(years, age){
 
-    var yearsLeft = expactedYearsToLive - userAge;
-    var daysLeft = yearsLeft * 365;
-    var weeksLeft = yearsLeft * 52;
-    var monthsLeft = yearsLeft * 12;
+    var yearsRemaining = years - age;
+    var days = yearsRemaining * 365;
+    var weeks = yearsRemaining * 52;
+    var months = yearsRemaining * 12;
 
-    alert("You have " + daysLeft + " days, " + weeksLeft + " weeks, and " + monthsLeft + " months left.");
+    alert("You have " + days + " days, " + weeks + " weeks, and " + months + " months left.");
     }
 
-var expactedYearsToLive = prompt("What is your expected age to live?");
+var expactedYears = prompt("What is your expected age to live?");
 var userAge = prompt("How old re you?");
 
-lifeInWeeks();
+lifeInWeeks(expactedYears, userAge);
