@@ -1,23 +1,17 @@
+//List of invited guests.
 var guestList = ["Angela", "Jack", "Pam", "James", "Lara", "Jason"];
-var guestNumber = guestList.length;
+//The name of the guest to check if invited.
 var guestName = prompt("What is your name?");
 
-function lisOfInvitedGuests(name){
+//Guest name verefication function.
+function nameVerefication(name){
+    var nameCheck = guestList.includes(guestName);
 
-    if(name === guestList[0]){
-        return alert("Hello " + name);
-    }else if(name === guestList[1]){
-        return alert("Hello " + name);
-    }else if(name === guestList[2]){
-        return alert("Hello " + name);
-    }else if(name === guestList[3]){
-        return alert("Hello " + name);
-    }else if(name === guestList[4]){
-        return alert("Hello " + name);
-    }else if(name === guestList[5]){
-
+    if(nameCheck === true){
+        return "Welcome " + name + ", we are glad to see you!";
+    }else{
+        return "Hello " + name + ", we are sorry but your are not in the invited list";
     }
-    return alert("Hello " + name + ", you are not invated") ;
 }
-
-lisOfInvitedGuests(guestName);
+//Verification function with the next text message to the guest.
+alert(nameVerefication(guestName));
