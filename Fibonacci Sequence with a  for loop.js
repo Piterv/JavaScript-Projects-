@@ -1,25 +1,25 @@
-// Array stores generated the Fibonacci sequence.
-var fibonacciSequence = [];
 // The function generates the given Fibonacci number.
-function fibonacciGenerator(n) {
-// Start for loop.
-  for (i = 0; i < n; i++) {
+function fibonacciGenerator(n){
+    
+    var output = []; 
+    
+    for(var i = 0; i < n; i++){
 
-    var firstNumber = fibonacciSequence[(i - 2)];
-    var secondNumber = fibonacciSequence[i - 1];
-    var result = firstNumber + secondNumber;
+        var firstNumber = output[(i - 2)];
+        var secondNumber = output[i - 1];
+        var result = firstNumber + secondNumber;
+        
+        if(i === 0){
+            output.push(0);
+        }else if(i === 1){
+            output.push(1);
+        }else{
+            output.push(result);
+        }
 
-    if (i === 0) {
-      fibonacciSequence.push(0);
-    } else if (i === 1) {
-      fibonacciSequence.push(1);
-    } else {
-      fibonacciSequence.push(result);
     }
-
-    console.log(fibonacciSequence);
-  }
-// End for loop.
+    return output;
 }
 
-fibonacciGenerator(20);
+output = fibonacciGenerator(20);
+console.log(output);
